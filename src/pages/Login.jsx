@@ -71,7 +71,7 @@ const Login = () => {
         <div className={styles.demoBox}>
           <KeyRound size={18} color="var(--btn-primary)" style={{ flexShrink: 0, marginTop: 2 }} />
           <div className={styles.demoText}>
-            <strong>Demo Credentials:</strong>
+            <strong>Use this Credentials:</strong>
             <br />
             Username: <code>Ponmani</code> &nbsp;|&nbsp; Password: <code>1234</code>
           </div>
