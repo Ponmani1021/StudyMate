@@ -34,7 +34,7 @@ function App() {
   return (
     <ThemeProvider>
       <AuthProvider>
-        <BrowserRouter>
+        <BrowserRouter basename="/StudyMate">
         <Routes>
           {/* Public Home Route */}
           <Route
