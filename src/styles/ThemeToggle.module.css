@@ -1,0 +1,34 @@
+.themeToggleBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  background-color: var(--bg-surface-alt);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.18s ease;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.themeToggleBtn:hover {
+  background-color: var(--border-color);
+  color: var(--btn-primary);
+  border-color: var(--border-glow);
+}
+
+.themeToggleBtn:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+.icon {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.themeToggleBtn:hover .icon {
+  transform: rotate(15deg);
+}

@@ -1,0 +1,269 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  min-height: 92vh;
+  background-color: var(--bg-secondary);
+  padding-top: 10vh;
+  padding-bottom: 50px;
+}
+
+.mainWrappeer {
+  width: 88%;
+  max-width: 1200px;
+}
+
+.hero {
+  padding: 40px 0 50px;
+}
+
+.heroWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.heroImgContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 520px;
+  position: relative;
+}
+
+.heroImg {
+  width: 100%;
+  max-height: 480px;
+  object-fit: contain;
+}
+
+.heroTextContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.heroFirstLine {
+  color: var(--text-accent);
+  width: max-content;
+  padding: 5px 14px;
+  font-size: 0.85em;
+  font-weight: 600;
+  background-color: rgba(79, 70, 229, 0.1);
+  border: 1px solid rgba(79, 70, 229, 0.25);
+  border-radius: 20px;
+  margin: 0 0 16px 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.heroFirstLine i {
+  color: var(--btn-primary);
+}
+
+.heroBigText {
+  color: var(--text-primary);
+  font-size: 3.8em;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.8px;
+  margin: 0;
+}
+
+.heroBigText span {
+  color: var(--btn-primary);
+}
+
+.heroPara {
+  letter-spacing: 0.1px;
+  color: var(--text-secondary);
+  padding: 20px 0 28px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 540px;
+  margin: 0;
+}
+
+.heroBtnContainer {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  background-color: var(--btn-primary);
+  color: var(--text-inverse);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.15s ease;
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: var(--btn-primary-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.lmBtn {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.lmBtn:hover {
+  background-color: var(--bg-surface-alt);
+  border-color: var(--border-glow);
+}
+
+/* ABOUT SECTION */
+.about {
+  padding: 40px 0 20px;
+  width: 100%;
+}
+
+.aboutCard {
+  background-color: var(--bg-surface);
+  border-radius: 16px;
+  padding: 36px 32px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.aboutHeading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.featuresRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.featureItem {
+  background-color: var(--bg-surface-alt);
+  border-radius: 12px;
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.featureItem:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-glow);
+}
+
+.featureIcon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background-color: var(--bg-surface);
+  color: var(--btn-primary);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+}
+
+.featureItem h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.featureItem p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 960px) {
+  .heroWrapper {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 32px;
+  }
+
+  .heroTextContainer {
+    align-items: center;
+  }
+
+  .heroBigText {
+    font-size: 3em;
+  }
+
+  .heroPara {
+    text-align: center;
+  }
+
+  .heroBtnContainer {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .mainWrappeer {
+    width: 92%;
+  }
+
+  .heroBigText {
+    font-size: 2.2em;
+  }
+
+  .heroPara {
+    font-size: 0.95rem;
+  }
+
+  .heroBtnContainer {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .aboutCard {
+    padding: 24px 16px;
+  }
+}
+
+@media (max-width: 380px) {
+  .heroBigText {
+    font-size: 1.85em;
+  }
+}

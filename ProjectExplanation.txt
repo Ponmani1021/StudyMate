@@ -1,0 +1,235 @@
+# StudyMate – Study Planner Web Application
+
+## 1. What is StudyMate?
+
+StudyMate is a personal study management web application that helps students organize their studies, manage assignments, plan their daily timetable, track their study time, and understand their academic progress in one place.
+
+Normally, students use notebooks to write timetables, separate lists to remember assignments, mobile timers to track study hours, and other apps to monitor their progress. Managing everything separately can be confusing.
+
+StudyMate brings these activities together into a single web application. Students can plan what to study, decide when to study, track what they complete, and review their progress.
+
+The main goal is to help students study in a more organized, consistent, and productive way.
+
+
+
+
+
+## 2. What problem does StudyMate solve?  ##
+
+Imagine a college student who has five subjects, three assignments, an upcoming examination, and a goal of studying three hours every day.
+
+The student might face these problems:
+
+- Forgetting assignment deadlines.
+- Not knowing which subject to study first.
+- Having no proper daily study timetable.
+- Spending too much time on one subject and neglecting others.
+- Not knowing how many hours they actually studied.
+- Being unable to measure whether their study habits are improving.
+
+StudyMate is designed to address these problems through a set of connected features.
+
+
+
+
+## 3. What can StudyMate do?
+
+StudyMate will have seven main modules. Each module has a specific purpose.
+
+
+## 1. Dashboard
+
+Main page
+
+The Dashboard gives students an overview of their study activities immediately after opening the application.
+
+What it can do:
+
+- Display the number of subjects and pending tasks.
+- Show today's study schedule.
+- Display completed and upcoming assignments.
+- Show daily study goals and study-hour summaries.
+- Provide quick access to other modules.
+
+Example: A student opens StudyMate and sees two pending assignments, three study sessions planned for today, and 90 minutes of study completed.
+
+[RoboTutor: AI-Powered Animated Learning · Built with Blink](https://images.openai.com/static-rsc-4/vpC8iDXJ5DikbOjJHOTUTgtdvt0L2p3iF_iyxSLmJ2BCFfA_HDMZmwxrvg-W4jdF3O6IIOZShvTc9K9MwWCILLDvtT-2tJASKpLnA2Zh-ipr4FiwB5_pFFsGnHv_PvKp05_hoz5VbLpus3KcK3_1brijrli0gk004ZBtVtz4W2o?purpose=inline)
+
+## 2. Subjects
+
+This module allows students to organize the subjects they are studying.
+
+What it can do:
+
+- Add new subjects.
+- Edit subject details.
+- Delete subjects.
+- Assign subject names, descriptions and colors.
+- Organize tasks and study sessions around subjects.
+
+Example: A student adds Python Programming, Database Management Systems, Computer Networks and Mathematics. These subjects can then be associated with tasks and study sessions.
+
+[Timetable Generator - DaySchedule](https://images.openai.com/static-rsc-4/viyzPy-bjh-pxgJ8eBt3PDlH5FF6Jmb6f_f31qzBqy2tic2JSRouN3V5EIr4VOLKgFtOAr4KPmGMvwu6Km-LByvSg7eg-dmx9ezRy3PNBzRFNrowrxDIn0CFNEcaEVqvQw6cDO-bMmf2r2hz3flLku5Osyocu3Msv3Y69Nqjfpk?purpose=inline)
+
+## 3. Study Timetable
+
+This module helps students decide when they will study each subject.
+
+What it can do:
+
+- Create daily or weekly study schedules.
+- Select a subject, date, start time and duration.
+- Edit or delete planned sessions.
+- View upcoming study sessions.
+
+Example: A student schedules Python from 6:00 PM to 7:00 PM and DBMS from 7:30 PM to 8:30 PM.
+
+The timetable organizes the plan; actual completion should be recorded separately through study-session tracking.
+
+[TaskatyApp | Devpost](https://images.openai.com/static-rsc-4/9GRh18s4s8DPVLWiX0Bxm03t--Qsuif0sJqL3xgyVgoe8As9RgtP7t4qvQDKCM3_r98zDqINuw3qWBuwV5i9b9-eJAeJyNOTBtdFKmiLk41WAdWqpIclTh6tElrucCCHcKdntFPUHOxjnP9f1QRg2cJH-4eUlccdBF_nMXkq240?purpose=inline)
+
+## 4. Assignments & Tasks
+
+This module helps students remember academic work and manage deadlines.
+
+What it can do:
+
+- Add assignments, revision tasks and other study activities.
+- Set due dates and priority levels.
+- Associate tasks with subjects.
+- Edit and delete tasks.
+- Mark tasks as completed.
+- Identify pending and overdue tasks.
+
+Example: A student adds “Complete Python Assignment,” sets tomorrow as the deadline, chooses high priority, and marks it completed after submission.
+
+[Flow Pomodoro | Devpost](https://images.openai.com/static-rsc-4/MCEJY7gbgl6qobAmTkUF0zp1o7FsODvQdXhLCm3XcFwoo7Oe8x-67h9g5r2pQZ7xhsscSEe1s8bCURM2Te06Vli5HClF8e1wXAj7korFVp0aZJ7hndN5bQrb8Eosm-mj5pxcX6bgLpJR7MfDqJLM_IVadVOE_yV9wdHS3FiOgQE?purpose=inline)
+
+## 5. Study Timer
+
+This module helps students focus on studying for a selected period.
+
+What it can do:
+
+- Start, pause and reset a timer.
+- Use the Pomodoro technique, such as 25 minutes of study followed by a 5-minute break.
+- Record completed focus sessions.
+- Associate a session with a subject.
+- Calculate study time from recorded sessions.
+
+Example: A student starts a 25-minute Python study session. After completing it, the session is recorded and can contribute to their study statistics.
+
+[Study Planner Template (Free + Editable) | Kuse Templates](https://images.openai.com/static-rsc-4/llWUduFtOsbIYm-LadeSwRAiNTWMuALGvBopOujM41r6COZOZNP4TJ__kK2g0-6HzhUW4jMfKMWaVVx-fcCzlM7R08hIz0B9AuLF4dse6F8LQUD1X1juEhlMSYyxsw_qFxjATpCi-SqXN_8wncRLaKHNNvYTLgXoAxLM6UhjvZA?purpose=inline)
+
+## 6. Progress & Analytics
+
+This module helps students understand their study habits using the data recorded in the application.
+
+What it can do:
+
+- Display total recorded study hours.
+- Show study time by day or week.
+- Calculate task completion percentages.
+- Compare recorded study time with daily goals.
+- Display charts and progress summaries.
+
+Example: A student discovers that they studied 12 hours this week and completed 80% of their tasks.
+
+These are calculated summaries of recorded activity, not predictions of examination marks or guaranteed academic performance.
+
+[Student Planner HTML Web App, Assignment Tracker, Schedule, Notes (digital Download) - Etsy](https://images.openai.com/static-rsc-4/vek_4QphZIVtTL1lf58daymqM39DBNJ9rDs73XHDke2WTH8l-0Gr1cClCeZ5-1Zj2WvOwWKD_RqFVZIcNoHPSRKsaEsP12_E0ktqsz7c-qcvIZUoCgkqxkahpbrFNqSGy1VIrxt-DT0gj-kJLuiFACHvmF4DntuIK-J5IPkW3dU?purpose=inline)
+
+## 7. Settings
+
+This module allows students to customize their StudyMate experience.
+
+What it can do:
+
+- Set a daily study-hour goal.
+- Change between light and dark themes.
+- Configure basic profile preferences.
+- Export saved study data as a JSON file.
+
+Example: A student sets a daily goal of three hours and enables dark mode for studying at night.
+
+There will also be a Not Found page for invalid URLs. It is an error-handling page, not an additional study management module.
+
+## 4. How will a student use StudyMate in real life?
+
+Consider a student named Arun preparing for college examinations.
+
+Step 1 — Organize subjects
+
+Arun adds Python, DBMS and Computer Networks to his Subjects module.
+
+Step 2 — Create a timetable
+
+He plans to study Python in the evening and DBMS later that night.
+
+Step 3 — Manage assignments
+
+He records an assignment due tomorrow and gives it high priority.
+
+Step 4 — Focus and record study time
+
+He uses the Pomodoro timer while studying and records completed sessions.
+
+Step 5 — Review progress
+
+At the end of the week, he checks how many hours he studied and how many tasks he completed.
+
+This is the core workflow: Plan → Organize → Study → Track → Improve.
+
+## 5. What technologies will be used, and why?
+
+StudyMate will initially be a frontend web application built using React JS.
+
+| Technology     | Why we use it                                                                 |
+| -------------- | ----------------------------------------------------------------------------- |
+| HTML           | Provides the basic structure of the application.                              |
+| CSS            | Controls colors, layouts, spacing and responsiveness.                         |
+| JavaScript     | Handles calculations, interactions, timers and application logic.             |
+| React JS       | Builds reusable components and updates the interface when data changes.       |
+| Vite           | Creates and runs the React development project.                               |
+| React Router   | Allows navigation between Dashboard, Subjects, Tasks and other pages.         |
+| `localStorage` | Saves data in the browser so it remains available after a normal page reload. |
+| Recharts       | Creates visual charts for study statistics.                                   |
+| Lucide React   | Provides consistent icons for navigation and actions.                         |
+
+### How will the data be stored?
+
+For the beginner version, we will use browser `localStorage`. This means a student's subjects, tasks, preferences and study records can be saved on their device.
+
+However, this version will not automatically provide cloud synchronization, multi-device access or secure user accounts. Those features would require a backend and database if we decide to add them later.
+
+## 6. What StudyMate will and will not do
+
+It is important to define the project scope before writing code.
+
+Included in the planned project
+
+Subject management, task management, timetable planning, Pomodoro timer, study-session records, progress charts, study goals, theme customization and data export.
+
+Not included in the initial version
+
+AI-generated study plans, automatic examination prediction, online classes, teacher/student collaboration, cloud synchronization, real authentication and automatic assignment reminders outside the application.
+
+These advanced features could be considered in a future version, but we should not claim them as existing functionality unless we actually implement them.
+
+## 7. What is the final outcome of this project?
+
+When completed, StudyMate will be a responsive, interactive study planner website that allows students to manage their academic activities from one interface.
+
+The finished application should enable a student to:
+
+- Keep subjects and study tasks organized.
+- Plan study sessions in advance.
+- Remember deadlines and priorities.
+- Track focused study time.
+- Understand their progress through charts and statistics.
+- Customize their study environment.
+- Keep their information saved between visits on the same browser.
+
+In simple words: StudyMate acts like a digital study assistant. It does not study for students; it helps them decide what to study, when to study, what work remains, and how consistently they are studying.
+
+That is the theoretical foundation of the project. Before beginning development, we should use this scope to decide the exact screens, data fields, and behavior of each feature so that every part of the application works together consistently.

@@ -1,0 +1,457 @@
+/* ==========================================================================
+   Settings Module Styles — Earthy Forest Theme System
+   ========================================================================== */
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 920px;
+}
+
+/* Header */
+.headerRow {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pageTitle {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.4px;
+  margin: 0;
+}
+
+.pageDescription {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Settings Sections Stack */
+.sectionsStack {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.settingsCard {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 26px 28px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.settingsCard:hover {
+  border-color: var(--border-glow);
+  box-shadow: var(--shadow-md);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.cardIconWrap {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cardHeaderText {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.cardTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.cardSubtitle {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Form Groups & Inputs */
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 9px;
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  font-size: 0.92rem;
+  transition: all 0.15s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--btn-primary);
+  box-shadow: 0 0 0 2px rgba(186, 106, 76, 0.2);
+}
+
+.input:disabled {
+  background-color: var(--bg-surface-alt);
+  color: var(--text-muted);
+  cursor: not-allowed;
+}
+
+.helperText {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* Presets Row */
+.presetsRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.presetBtn {
+  background-color: var(--bg-surface-alt);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.presetBtn:hover {
+  color: var(--text-primary);
+  border-color: var(--border-glow);
+}
+
+.presetBtn.activePreset {
+  background-color: var(--btn-primary);
+  color: var(--text-inverse);
+  border-color: var(--btn-primary);
+}
+
+.minuteEquivalentTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--bg-surface-alt);
+  border: 1px solid var(--border-color);
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  width: fit-content;
+}
+
+/* Theme Selection Tiles */
+.themeTilesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.themeTile {
+  background-color: var(--bg-surface);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  text-align: left;
+}
+
+.themeTile:hover {
+  border-color: var(--border-glow);
+  transform: translateY(-1px);
+}
+
+.themeTile.activeThemeTile {
+  border-color: var(--btn-primary);
+  background-color: var(--bg-surface-alt);
+}
+
+.themeTileContent {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.themeIconWrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.themeTileTitle {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 2px;
+}
+
+.themeTileDesc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.checkCircle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+}
+
+.activeCheckCircle {
+  background-color: var(--btn-primary);
+  border-color: var(--btn-primary);
+  color: var(--text-inverse);
+}
+
+/* Profile Form Grid */
+.profileFieldsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Data Export Summary Box */
+.exportSummaryBox {
+  background-color: var(--bg-surface-alt);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.exportMetricsRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 12px;
+}
+
+.exportMetricItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.exportMetricValue {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.exportMetricLabel {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.exportNote {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+  margin: 0;
+  border-top: 1px solid var(--border-color);
+  padding-top: 10px;
+}
+
+/* Action Buttons */
+.saveBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--btn-primary);
+  color: var(--text-inverse);
+  padding: 10px 22px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  width: fit-content;
+  box-shadow: var(--shadow-sm);
+}
+
+.saveBtn:hover:not(:disabled) {
+  background-color: var(--btn-primary-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.saveBtn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.exportBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--btn-primary);
+  color: var(--text-inverse);
+  padding: 11px 24px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  width: fit-content;
+  box-shadow: var(--shadow-sm);
+}
+
+.exportBtn:hover {
+  background-color: var(--btn-primary-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Alert Notices */
+.alertSuccess {
+  padding: 10px 14px;
+  border-radius: 9px;
+  background-color: rgba(57, 122, 88, 0.12);
+  border: 1px solid rgba(57, 122, 88, 0.25);
+  color: var(--success);
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: fadeIn 0.18s ease;
+}
+
+.alertError {
+  padding: 10px 14px;
+  border-radius: 9px;
+  background-color: #fdf2f2;
+  border: 1px solid #fecaca;
+  color: var(--error);
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: fadeIn 0.18s ease;
+}
+
+/* Notification Toast */
+.toastNotice {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  padding: 12px 18px;
+  border-radius: 9px;
+  box-shadow: var(--shadow-md);
+  font-size: 0.9rem;
+  font-weight: 500;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .settingsCard,
+  .themeTile,
+  .saveBtn,
+  .exportBtn,
+  .alertSuccess,
+  .alertError {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* Responsive Queries */
+@media (max-width: 680px) {
+  .settingsCard {
+    padding: 20px 18px;
+  }
+
+  .themeTilesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .profileFieldsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .saveBtn,
+  .exportBtn {
+    width: 100%;
+  }
+}

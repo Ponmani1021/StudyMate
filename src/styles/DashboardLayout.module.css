@@ -1,0 +1,159 @@
+.layoutContainer {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.backdrop {
+  display: none;
+}
+
+.mainWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* Modern Clean Top Bar */
+.topBar {
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: var(--shadow-sm);
+}
+
+.topBarLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.menuButton {
+  display: none;
+  background: var(--bg-surface-alt);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 8px;
+  color: var(--text-primary);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.menuButton:hover {
+  background-color: var(--border-color);
+  color: var(--btn-primary);
+}
+
+.portalTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: -0.2px;
+}
+
+.portalBadge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: rgba(79, 70, 229, 0.1);
+  color: var(--btn-primary);
+  padding: 2px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border-glow);
+  letter-spacing: 0.2px;
+}
+
+.topBarRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.userTag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: var(--bg-surface-alt);
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+}
+
+.userDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--success);
+}
+
+.contentArea {
+  flex: 1;
+  padding: 28px 32px;
+  max-width: 1380px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Tablet & Mobile Breakpoints */
+@media (max-width: 900px) {
+  .menuButton {
+    display: inline-flex;
+  }
+
+  .backdrop {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--overlay);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 900;
+    animation: fadeIn 0.15s ease;
+  }
+
+  .contentArea {
+    padding: 20px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .topBar {
+    padding: 12px 16px;
+  }
+
+  .contentArea {
+    padding: 16px 12px;
+  }
+
+  .portalTitle span {
+    display: none;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

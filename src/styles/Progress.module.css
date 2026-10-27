@@ -1,0 +1,762 @@
+/* ==========================================================================
+   Progress & Analytics Module Styles — Earthy Forest Theme System
+   ========================================================================== */
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Page Header & Date Range Selector */
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.headerText {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pageTitle {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.4px;
+  margin: 0;
+}
+
+.pageDescription {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.rangeSelector {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--bg-surface-alt);
+  padding: 4px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.rangeBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.rangeBtn:hover {
+  color: var(--text-primary);
+}
+
+.rangeBtn.activeRange {
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Summary Cards Grid */
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+}
+
+.summaryCard {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  position: relative;
+}
+
+.summaryCard:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-glow);
+  box-shadow: var(--shadow-md);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cardLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.2px;
+}
+
+.cardIconWrap {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cardValueRow {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cardMainValue {
+  font-size: 1.95rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.6px;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.cardSubtext {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* Comparison Badges */
+.diffBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-top: 4px;
+  width: fit-content;
+}
+
+.diffPositive {
+  background-color: rgba(57, 122, 88, 0.12);
+  color: var(--success);
+}
+
+.diffNegative {
+  background-color: rgba(196, 61, 54, 0.12);
+  color: var(--error);
+}
+
+/* Daily Goal Bar on Summary Card */
+.goalProgressBarBg {
+  width: 100%;
+  height: 8px;
+  background-color: var(--bg-surface-alt);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.goalProgressBarFill {
+  height: 100%;
+  background-color: var(--btn-primary);
+  border-radius: 6px;
+  transition: width 0.4s ease;
+}
+
+/* Two-column layout for Charts & Analytics */
+.analyticsRowTwoCol {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.analyticsSectionCard {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: border-color 0.18s ease;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.sectionTitleWrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sectionTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.sectionSubtext {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.sectionControls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.subRangeBtn {
+  padding: 4px 10px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-surface-alt);
+  color: var(--text-secondary);
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.subRangeBtn:hover {
+  color: var(--text-primary);
+  border-color: var(--border-glow);
+}
+
+.subRangeBtn.activeSubRange {
+  background: var(--btn-primary);
+  color: var(--text-inverse);
+  border-color: var(--btn-primary);
+}
+
+/* SVG Bar Chart */
+.chartContainer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.chartSvg {
+  width: 100%;
+  height: 220px;
+  overflow: visible;
+}
+
+.chartGridLine {
+  stroke: var(--border-color);
+  stroke-dasharray: 4, 4;
+  stroke-width: 1;
+  opacity: 0.7;
+}
+
+.chartBar {
+  fill: var(--btn-primary);
+  transition: fill 0.18s ease, transform 0.18s ease, opacity 0.18s ease;
+  cursor: pointer;
+}
+
+.chartBar:hover {
+  fill: var(--btn-primary-hover);
+  opacity: 0.9;
+}
+
+.chartBar.highestBar {
+  fill: #8FA28A;
+}
+
+.chartBar.todayBar {
+  fill: var(--btn-primary);
+}
+
+.chartAxisText {
+  fill: var(--text-secondary);
+  font-size: 11px;
+  font-weight: 600;
+  text-anchor: middle;
+}
+
+/* Chart Tooltip */
+.chartTooltip {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background-color: var(--bg-surface-alt);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  pointer-events: none;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: fadeIn 0.15s ease;
+}
+
+.highestDayBanner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--bg-surface-alt);
+  padding: 8px 14px;
+  border-radius: 9px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+/* Task Completion Donut Chart Section */
+.donutWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
+.donutSvgWrap {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.donutSvg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.donutSegment {
+  fill: none;
+  stroke-width: 20;
+  transition: stroke-dasharray 0.4s ease;
+}
+
+.donutCenterText {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  pointer-events: none;
+}
+
+.donutCenterPercent {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.donutCenterLabel {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.donutLegend {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 150px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.85rem;
+}
+
+.legendLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legendCount {
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+/* Subject Study Section */
+.subjectList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.subjectRow {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.subjectRowHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.88rem;
+}
+
+.subjectNameWrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.subjectDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.subjectTimeWrap {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 0.85rem;
+}
+
+.subjectTimeVal {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.subjectPercent {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+.subjectBarBg {
+  width: 100%;
+  height: 8px;
+  background-color: var(--bg-surface-alt);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.subjectBarFill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.4s ease;
+}
+
+/* Daily Goal Comparison Detailed Card */
+.goalComparisonCard {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.goalStatsRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 14px;
+  background-color: var(--bg-surface-alt);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.goalStatItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.goalStatLabel {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.goalStatValue {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.goalProgressContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.goalProgressHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.goalStatusMsg {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* Recent Activity Section */
+.recentActivityList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.activityCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 16px;
+  background-color: var(--bg-surface-alt);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.activityCard:hover {
+  transform: translateX(2px);
+  border-color: var(--border-glow);
+}
+
+.activityLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.activityInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.activitySubject {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.activityNote {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.activityMeta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+.activityDurationBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 16px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--text-primary);
+  flex-shrink: 0;
+}
+
+/* Empty States */
+.emptyCardState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 36px 16px;
+  gap: 10px;
+  color: var(--text-muted);
+}
+
+.emptyStateTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.emptyStateText {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  max-width: 360px;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.emptyActionLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--btn-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 6px;
+}
+
+.emptyActionLink:hover {
+  text-decoration: underline;
+}
+
+/* Edit Goal Trigger Button */
+.editGoalTriggerBtn {
+  background: none;
+  border: none;
+  color: var(--btn-primary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 4px;
+}
+
+.editGoalTriggerBtn:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .summaryCard,
+  .activityCard,
+  .goalProgressBarFill,
+  .subjectBarFill,
+  .chartBar,
+  .chartTooltip {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* Responsive Queries */
+@media (max-width: 992px) {
+  .analyticsRowTwoCol {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 580px) {
+  .headerRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .rangeSelector {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .rangeBtn {
+    flex: 1;
+    justify-content: center;
+    padding: 6px 8px;
+    font-size: 0.8rem;
+  }
+
+  .donutWrapper {
+    flex-direction: column;
+  }
+
+  .activityCard {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .activityDurationBadge {
+    align-self: flex-start;
+  }
+}

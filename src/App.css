@@ -1,0 +1,301 @@
+/* ==========================================================================
+   StudyMate — Earthy Palette & Forest Theme System
+   ========================================================================== */
+
+/* ========================================
+   Global Reset
+======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+    'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+body {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+/* ========================================
+   Light Theme — Earthy Palette
+======================================== */
+
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+
+  /* Backgrounds */
+  --bg-primary: #8FA28A;
+  --bg-secondary: #F4F1EA;
+  --bg-surface: #FFFFFF;
+  --bg-surface-alt: #E7EBE2;
+  --bg-footer: #24352F;
+
+  /* Text */
+  --text-primary: #46524b;
+  --text-secondary: #6e7066;
+  --text-accent: #A9573B;
+  --text-inverse: #FFFFFF;
+
+  /* Buttons */
+  --btn-primary: #BA6A4C;
+  --btn-primary-hover: #A9573B;
+  --btn-secondary: #FFAE6E;
+  --btn-secondary-hover: #F69A54;
+
+  /* Additional Accents */
+  --accent-purple: #77865B;
+  --accent-purple-dark: #586744;
+  --accent-rose: #C98778;
+
+  /* Borders and Shadows */
+  --border-color: #D8D8CC;
+  --focus-ring: #586744;
+  --shadow-color: rgb(50 40 35 / 10%);
+
+  /* Status Colors */
+  --success: #397A58;
+  --warning: #B7791F;
+  --error: #C43D36;
+
+  /* Shared UI */
+  --overlay: rgb(30 30 30 / 50%);
+  --disabled-bg: #E5E2DD;
+  --disabled-text: #89817D;
+
+  /* Component Aliases for Compatibility */
+  --bg-card: var(--bg-surface);
+  --bg-sidebar: #FFFFFF;
+  --bg-input: #FFFFFF;
+  --bg-body: var(--bg-secondary);
+  --text-muted: #89817D;
+  --border-glow: #C4C4B6;
+  --border-glow-purple: #A7B58B;
+
+  --shadow-sm: 0 1px 3px var(--shadow-color);
+  --shadow-md: 0 4px 12px var(--shadow-color);
+  --shadow-lg: 0 10px 24px var(--shadow-color);
+  --shadow-neon: 0 4px 12px var(--shadow-color);
+  --shadow-neon-hover: 0 8px 20px var(--shadow-color);
+  --shadow-purple: 0 4px 12px var(--shadow-color);
+  --shadow-pink: 0 4px 12px var(--shadow-color);
+
+  --neon-cyan: #2DAA9E;
+  --neon-blue: #8FA28A;
+  --neon-purple: #77865B;
+  --neon-pink: #C98778;
+  --neon-emerald: #397A58;
+}
+
+/* ========================================
+   Dark Theme — Forest & Earth
+======================================== */
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Backgrounds */
+  --bg-primary: #35483D;
+  --bg-secondary: #202923;
+  --bg-surface: #29352D;
+  --bg-surface-alt: #344137;
+  --bg-footer: #151D18;
+
+  /* Text */
+  --text-primary: #F1EAE0;
+  --text-secondary: #C6C4B8;
+  --text-accent: #DDE5BC;
+  --text-inverse: #202923;
+
+  /* Buttons */
+  --btn-primary: #D18A6B;
+  --btn-primary-hover: #BD7658;
+  --btn-secondary: #D9A16F;
+  --btn-secondary-hover: #C58A57;
+
+  /* Additional Accents */
+  --accent-purple: #A7B58B;
+  --accent-purple-dark: #7F9065;
+  --accent-rose: #D39A8B;
+
+  /* Borders and Shadows */
+  --border-color: #465349;
+  --focus-ring: #DDE5BC;
+  --shadow-color: rgb(0 0 0 / 25%);
+
+  /* Status Colors */
+  --success: #86C69A;
+  --warning: #E9C27A;
+  --error: #EF9690;
+
+  /* Shared UI */
+  --overlay: rgb(0 0 0 / 65%);
+  --disabled-bg: #343D36;
+  --disabled-text: #969D96;
+
+  /* Component Aliases for Compatibility */
+  --bg-card: var(--bg-surface);
+  --bg-sidebar: #202923;
+  --bg-input: #202923;
+  --bg-body: var(--bg-secondary);
+  --text-muted: #969D96;
+  --border-glow: #596B5E;
+  --border-glow-purple: #7F9065;
+
+  --shadow-sm: 0 1px 3px var(--shadow-color);
+  --shadow-md: 0 4px 12px var(--shadow-color);
+  --shadow-lg: 0 8px 24px var(--shadow-color);
+  --shadow-neon: 0 4px 12px var(--shadow-color);
+  --shadow-neon-hover: 0 8px 20px var(--shadow-color);
+  --shadow-purple: 0 4px 12px var(--shadow-color);
+  --shadow-pink: 0 4px 12px var(--shadow-color);
+
+  --neon-cyan: #5BBDB3;
+  --neon-blue: #A7B58B;
+  --neon-purple: #A7B58B;
+  --neon-pink: #D39A8B;
+  --neon-emerald: #86C69A;
+}
+
+/* ========================================
+   Form Elements
+======================================== */
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+button span,
+a span {
+  color: inherit;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ========================================
+   Selection & Accessibility
+======================================== */
+
+::selection {
+  background: var(--accent-purple);
+  color: #FFFFFF;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+/* Smooth theme transition across common UI elements */
+body,
+header,
+aside,
+main,
+nav,
+div,
+section,
+article,
+button,
+input,
+textarea,
+select {
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* ==========================================================================
+   Animation System
+   ========================================================================== */
+
+/* Page entrance */
+.pageEnter {
+  animation: pageFadeSlide 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes pageFadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Standard Card */
+.glassCard {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.glassCard:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-glow);
+  box-shadow: var(--shadow-md);
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
